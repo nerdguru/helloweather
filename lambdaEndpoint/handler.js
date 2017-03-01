@@ -4,6 +4,7 @@ var request = require('request');
 
 module.exports.hello = (event, context, callback) => {
 	
+  // Lambda API Gateway input signature	
   var location = 'New Orleans, LA';
   if(event.queryStringParameters != null && event.queryStringParameters.location != null)
     location = event.queryStringParameters.location;
@@ -21,7 +22,7 @@ module.exports.hello = (event, context, callback) => {
       var temperature = condition.temp;
       var output = 'Hello, it is ' + temperature + ' degrees in ' + location + ' and ' + text;
       console.log("Success:" + output);
-	  // Lambda response mechanics, build a JSON string and call the callback function
+	  // Lambda API Gateway response mechanics, build a JSON string with a body and call the callback function
 	  const response = {
 	    statusCode: 200,
 	    body: output,
