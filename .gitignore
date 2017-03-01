@@ -1,0 +1,4 @@
+.DS_STORE
+.serverless/
+.npmignore/
+node_modules/
