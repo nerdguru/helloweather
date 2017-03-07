@@ -1,0 +1,12 @@
+{
+  "name": "azure-node-helloweather",
+  "version": "1.0.0",
+  "description": "A serverless example",
+  "main": "index.js",
+  "author": "",
+  "license": "MIT",
+   "dependencies": {
+    "serverless-azure-functions": "^0.1.0",
+    "request": "^2.79.0"
+  }
+}

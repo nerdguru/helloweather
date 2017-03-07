@@ -11,7 +11,7 @@ module.exports.hello = (event, context, callback) => {
     if (error) {
       console.error(error);
 	  // Lambda response mechanics, build a JSON string and call the callback function
-	  callback(new Error('Couldn\'t create the todo item.'));
+	  callback(new Error('Couldn\'t call Yahoo weather.'));
     } else {
       var condition = JSON.parse(body).query.results.channel.item.condition;
       var text = condition.text;

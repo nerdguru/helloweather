@@ -1,0 +1,11 @@
+service: helloWeather 
+
+provider:
+  name: openwhisk
+
+functions:
+  hello:
+    handler: handler.hello
+      
+plugins:
+    - serverless-openwhisk
