@@ -1,6 +1,8 @@
+'use strict';
+
 var request = require('request');
 
-function hello(params) {
+function main(params) {
     var location = params.location || 'New Orleans, LA';
     var url = 'https://query.yahooapis.com/v1/public/yql?q=select item.condition from weather.forecast where woeid in (select woeid from geo.places(1) where text="' + location + '")&format=json';
 
@@ -19,3 +21,5 @@ function hello(params) {
         });
     });
 }
+
+exports.handler = main;
