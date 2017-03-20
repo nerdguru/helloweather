@@ -1,0 +1,13 @@
+{
+  "name": "openwhisk-node-simple-http",
+  "version": "1.0.0",
+  "description": "Serverless example",
+  "author": "",
+  "scripts": {
+    "postinstall": "npm link serverless-openwhisk"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "request": "^2.79.0"
+   }
+}
